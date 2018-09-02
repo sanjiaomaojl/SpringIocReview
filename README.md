@@ -1,8 +1,8 @@
 # SpringIocReview
 IOC
-#Review
+# Review
 周末闲来无事，把IOC复习了一下，圣人云：温故而知新，可以为师矣。都是一些小的知识点。
-###创建对象
+### 创建对象
 方式一 使用无参构造器 （重点）<br>
 1.给类添加无参构造器<br>
 2.配置<bean>元素<br>
@@ -11,7 +11,7 @@ IOC
 方式二 实例工厂方法（了解）<br>
 ### 作用域
 默认情况下，容器对于某个bean。只会创建一个实例 <br>.
-在配置bean的时候，指定scope属性,用来配置作用域，缺省值是singleton(即一个bean只创建一个实例)，如果值为prootype(即一个bean只创多个实例)
+在配置bean的时候，指定scope属性,用来配置作用域，缺省值是singleton(即一个bean只创建一个实例)，如果值为prootype(即一个bean只创多个实例)<br>
 `<bean id = "**" class="**" scope="prootype"/>`
 ## IOC 即控制反转
 ### 是什么？
