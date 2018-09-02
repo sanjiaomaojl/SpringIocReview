@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <!--
+        scope属性:用来配置作用域,缺省值是
+        singleton(即一个bean只创建一个实例-默认),
+        prototype(即一个bean会创建多个实例).
+    -->
+
+    <bean id="s1" class="scope.ScopeBean" scope="prototype"/>
+</beans>

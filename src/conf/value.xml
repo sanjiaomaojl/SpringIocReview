@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
+    <bean id="vb1" class="value.ValueBean">
+        <property name="name" value="胡八一"/>
+        <property name="age" value="30"/>
+        <property name="city">
+            <list>
+                <value>北京</value>
+                <value>天津</value>
+                <value>上海</value>
+            </list>
+        </property>
+        <property name="interest">
+            <set>
+                <value>盗墓</value>
+                <value>战斗</value>
+                <value>骗子</value>
+            </set>
+        </property>
+        <property name="score">
+            <map>
+                <entry key="english" value="67"/>
+                <entry key="math" value="88"/>
+            </map>
+        </property>
+        <property name="db">
+            <props>
+                <prop key="username">Demo</prop>
+                <prop key="password">123456</prop>
+            </props>
+        </property>
+    </bean>
+    <!--将集合类型的值配置成一个bean-->
+    <util:list id="cityBean">
+        <value>上海</value>
+        <value>london</value>
+        <value>nick</value>
+    </util:list>
+    <!--引用的方式注入集合类型的值-->
+    <bean id="vb2" class="value.ValueBean">
+        <property name="city" ref="cityBean"/>
+    </bean>
+    <!--
+        读取properties文件的内容
+        classpath:按照类路径来搜索。
+        spring容器会依据路径找到对应的properties文件
+        然后读取文件的内容
+    -->
+    <util:properties id="config" location="classpath:conf/config.properties"/>
+</beans>

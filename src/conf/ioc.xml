@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean id="b1" class="IOC.B"/>
+    <bean id="c1" class="IOC.C"/>
+    <!--
+        property元素：表示使用set方法来注入依赖关系。
+        name指定属性名
+        ref指定属性值（被注入的bean的id）
+    -->
+    <bean id="a1" class="IOC.A">
+        <property name="b" ref="c1"/>
+    </bean>
+</beans>

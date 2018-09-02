@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="ad" class="IOC.AdminDao"/>
+
+    <bean id="ls" class="IOC.LoginService">
+        <property name="ad" ref="ad"/>
+    </bean>
+
+    <bean id="waiter" class="ioc2.Waiter"/>
+    <!--
+        autowire属性：表示让容器自动装配。
+        byName:容器依据属性名查找对应的bean，
+        然后调用对应的set方法来完成注入
+    -->
+    <bean id="rest" class="ioc2.Restaurant"
+          autowire="byName"/>
+</beans>
