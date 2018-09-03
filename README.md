@@ -28,7 +28,7 @@ IOC
 依赖注入的类可以增加一个接口，添加公共方法，[位置](https://github.com/sanjiaomaojl/SpringIocReview/blob/master/src/IOC/IB.java)，（sjmjl自己去看吧，不知道咋解释了。）
 ### 注入集合类型的值 
 List Set Map Properties<br>
-- 普通<br>
+- 基本类型的值<br>
 `<bean id="*" class="*">`<br>
 `<property name="*" value="*">`<br>
 `</bean>`<br>
